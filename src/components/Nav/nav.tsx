@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import "./nav.css";
 function Nav() {
     return (
-        <div className="nav">
+        <div className="nav lg:px-15 md:px-10 px-3">
             {/* Mobile nav */}
-            <div className="lg:hidden flex justify-between w-full p-3">
+            <div className="lg:hidden flex justify-between w-full mt-3">
                 <div className="flex justify-right align-middle w-1/2">
                     <img src={logo} alt="logo" />
                 </div>
@@ -16,7 +16,7 @@ function Nav() {
 
             {/* Desktop nav */}
             <div className="hidden lg:flex md:text-sm align-center w-full pt-5">
-                <div className="flex justify-end w-1/4">
+                <div className="flex w-1/4">
                     <img src={logo} alt="logo" className="" />
                 </div>
                 <div className="menus flex w-full justify-center">
@@ -53,7 +53,7 @@ function Nav() {
                         </li>
                     </ul>
                 </div>
-                <div className="flex w-1/6 items-center">
+                <div className="flex w-1/6 items-center justify-end">
                     <button className="flex bg-[#66B5DB] text-white rounded-xl px-5 py-2 font-bold">
                         Contact Us
                     </button>
