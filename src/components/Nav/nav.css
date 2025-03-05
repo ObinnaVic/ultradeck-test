@@ -1,0 +1,27 @@
+@media only screen and (max-width:800px) {
+    /* mobile-navigation */
+    .mobileNav {
+      top: 0;
+      left: 7rem;
+      right: 0;
+      bottom: 0;
+      position: fixed;
+      background-color: rgba(102, 181, 219, 1);
+      backdrop-filter: blur(0.5rem);
+      transition: transform 600ms ease-out;
+      transform: translateX(-0%);
+      z-index: 9999;
+      padding: 10px;
+    }
+  
+    .openNav {
+      transform: translateX(100%);
+    }
+  
+    @supports (inset: 0 0 0 0) {
+      .mobileNav {
+        inset: 0 7 0 0;
+      }
+    }
+  
+}

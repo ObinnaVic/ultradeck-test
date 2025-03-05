@@ -1,16 +1,60 @@
+import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/logo.png";
-import { Link } from "react-router-dom";
+import footerLogo from "../../assets/footer-logo.png";
 import "./nav.css";
 function Nav() {
+    const [nav, setNav] = useState(false);
+
+    const handleNav = () => setNav(!nav);
+
+    const CloseNav = () => setNav(false);
+
     return (
         <div className="nav lg:px-15 md:px-10 px-3">
             {/* Mobile nav */}
-            <div className="lg:hidden flex justify-between w-full mt-3">
-                <div className="flex justify-right align-middle w-1/2">
+            <div className="flex lg:hidden">
+                <div className="flex justify-between items-center w-full mt-3 text-black">
                     <img src={logo} alt="logo" />
+                    <i className="fa-solid fa-bars fa-fade bg-white p-2" onClick={handleNav}></i>
                 </div>
-                <div className="w-1/2 text-white flex justify-end">
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAExJREFUSEtjZKAxYKSx+QyjFhAM4QEJov8EnYVfAYqjsfmA5hZQ6AFU7QMSBzT3Ac3jgOYW0DyIhr4FNI8Dmlsw9ONg1AcoIUDz0hQAbegGGXzv/l0AAAAASUVORK5CYII=" className="bg-white md:w-10 md:h-10 w-7 h-7"/>
+                <div className={nav ? "mobileNav" : "mobileNav openNav"}>
+                    <div className="flex justify-between items-center w-full text-black">
+                        <img src={footerLogo} alt="logo" className="" />
+                        <i className="fa-solid fa-xmark fa-2xl" onClick={handleNav}></i>
+                    </div>
+                    <div>
+                        <ul className="flex flex-col items-center text-black">
+                            <li className="no-underline md:hover:underline md:active:underline decoration-[#66B5DB] decoration-2 underline-offset-[15px]" onClick={CloseNav}>
+                                <Link to="/">
+                                    <p>Home</p>
+                                </Link>
+                            </li>
+                            <li className="no-underline md:hover:underline md:active:underline decoration-[#66B5DB] decoration-2 underline-offset-[15px]" onClick={CloseNav}>
+                                <Link to="About">
+                                    <p>About Us</p>
+                                </Link></li>
+                            <li className="no-underline md:hover:underline md:active:underline decoration-[#66B5DB] decoration-2 underline-offset-[15px]" onClick={CloseNav}>
+                                <Link to="HowItWorks">
+                                    <p>How it works</p>
+                                </Link></li>
+                            <li className="no-underline md:hover:underline md:active:underline decoration-[#66B5DB] decoration-2 underline-offset-[15px]" onClick={CloseNav}>
+                                <Link to="Hospitals">
+                                    <p>For Hospitals</p>
+                                </Link>
+                            </li>
+                            <li className="no-underline md:hover:underline md:active:underline decoration-[#66B5DB] decoration-2 underline-offset-[15px]" onClick={CloseNav}>
+                                <Link to="Hospitals">
+                                    <p>For Radiologists</p>
+                                </Link>
+                            </li>
+                            <li className="no-underline md:hover:underline md:active:underline decoration-[#66B5DB] decoration-2 underline-offset-[15px]" onClick={CloseNav}>
+                                <Link to="Blog">
+                                    <p> Blog</p>
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
@@ -48,8 +92,6 @@ function Nav() {
                             <Link to="Blog">
                                 <p> Blog</p>
                             </Link>
-                        </li>
-                        <li>
                         </li>
                     </ul>
                 </div>

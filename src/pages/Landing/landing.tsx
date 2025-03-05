@@ -9,8 +9,6 @@ import howitworks3 from "../../assets/howitworks-3.png";
 import howitworks4 from "../../assets/howitworks-4.png";
 import landingCut5 from "../../assets/landing-cut-5.png";
 import section4Image from "../../assets/section-4-image.png";
-import landingCut6 from "../../assets/landing-cut-6.png";
-import logo from "../../assets/logo.png";
 const Landing = () => {
     return(
         <div className="">
@@ -57,7 +55,7 @@ const Landing = () => {
                         intelligence (AI) and remote collaboration with radiologists.
                         </p>
                     </div>
-                    <div className="flex md:justify-end justify-center lg:w-1/2">
+                    <div className="flex lg:justify-end justify-center lg:w-1/2">
                         <img src={landingCut3} alt="" />
                     </div>
                 </div>
@@ -107,7 +105,7 @@ const Landing = () => {
                     </div>
                 </div>
             </div>
-            <div className="relative text-black w-full lg:px-15 md:px-10 px-3 h-150 content-center">
+            <div className="relative text-black w-full lg:px-15 md:px-10 px-3 h-120 md:h-150 md:content-center py-7 md:py-0">
                 <button className="flex bg-[#66B5DB] text-white rounded-xl lg:px-5 lg:py-2 px-3 py-1 lg:font-bold text-sm mb-10">
                     what our numbers say &#x1F389;
                 </button>
@@ -125,7 +123,7 @@ const Landing = () => {
                         <p className="text-xs">Minutes or less wait-time</p>
                     </div>
                 </div>
-                <div className="absolute right-0 top-0 lg:w-1/3 md:w-2/5 w-[70%]">
+                <div className="absolute right-0 top-0 lg:w-1/3 md:w-2/5 w-[60%]">
                     <img src={landingCut5} alt="section-three-image" className="opacity-50" />
                 </div>
             </div>
@@ -146,17 +144,6 @@ const Landing = () => {
                 </div>
                 <div className="flex justify-center md:w-1/2 w-full">
                     <img src={section4Image} alt="section-4-image" />
-                </div>
-            </div>
-            <div>
-                <div>
-                    <img src={logo} alt="logo" className="" />
-                    <img src={landingCut6} alt="landing-page-cut image" />
-                </div>
-                <div className="lg:p-15 md:p-10 p-3">
-                    <div></div>
-                    <div></div>
-                    <div></div>
                 </div>
             </div>
         </div>
